@@ -121,7 +121,7 @@ app.listen(PORT, () => {
     meow()
 })
 
-async function postData(url = "", data = {}) {s
+async function postData(url = "", data = {}) {
     const response = await fetch(url, {
         method: "POST",
         mode: "cors",
