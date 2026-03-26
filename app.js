@@ -110,7 +110,7 @@ app.delete("/api/kittens/:id", async (req, res) => {
 });
 
 async function meow(kittenName){
-    await mongoose.connect("mmongodb+srv://davidedwardsx3_db_user:Musicator1207##@davideisms.cwgw8cu.mongodb.net/?appName=DavidEISMS");
+    await mongoose.connect("mongodb+srv://davidedwardsx3_db_user:Musicator1207##@davideisms.cwgw8cu.mongodb.net/?appName=DavidEISMS");
     const kitty1 = new Kitten({ name: kittenName })
     await kitty1.save()
     console.log(kitty1.name)
@@ -121,7 +121,7 @@ app.listen(PORT, () => {
     meow()
 })
 
-async function postData(url = "", data = {}) {
+async function postData(url = "", data = {}) {s
     const response = await fetch(url, {
         method: "POST",
         mode: "cors",
